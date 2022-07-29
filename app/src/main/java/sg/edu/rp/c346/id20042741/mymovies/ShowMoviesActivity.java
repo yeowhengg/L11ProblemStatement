@@ -26,7 +26,7 @@ public class ShowMoviesActivity extends AppCompatActivity {
     Button btnFilter;
     Spinner spinnerYear;
     ArrayAdapter<String> saMovie;
-    Boolean filter = true;
+    Boolean filter = false;
     ArrayList<String> allRatings;
 
     @Override
