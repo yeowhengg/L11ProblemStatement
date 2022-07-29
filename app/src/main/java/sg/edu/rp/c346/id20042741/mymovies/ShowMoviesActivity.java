@@ -63,7 +63,6 @@ public class ShowMoviesActivity extends AppCompatActivity {
                 }
                 dynamicRefresh();
                 aaMovie.notifyDataSetChanged();
-                if(alMovies.isEmpty()) Toast.makeText(ShowMoviesActivity.this, "Nothing to display", Toast.LENGTH_SHORT).show();
                 filter = !filter;
             }
         });
@@ -116,9 +115,11 @@ public class ShowMoviesActivity extends AppCompatActivity {
 
     public void dynamicRefresh(){
         DBHelper db = new DBHelper(ShowMoviesActivity.this);
-        alMovies = db.getPGRating(filter);
+        alMovies = db.filterPGRating(filter);
         aaMovie = new CustomAdapter(this, R.layout.row, alMovies);
         lvMovies.setAdapter(aaMovie);
+        if(alMovies.isEmpty()) Toast.makeText(ShowMoviesActivity.this, "Nothing to display", Toast.LENGTH_SHORT).show();
+
     }
 
 }

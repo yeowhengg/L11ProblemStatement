@@ -34,14 +34,14 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(createMovieMOVIETableSQL);
         Log.i("info", "created table");
 
-        //dummy record
+        /*//dummy record
         ContentValues values = new ContentValues();
         values.put(COLUMN_TITLE, "Ju On");
         values.put(COLUMN_GENRE, "Horror");
         values.put(COLUMN_RATING, "PG13");
         values.put(COLUMN_YEAR, "2014");
         
-        db.insert(TABLE_MOVIE, null, values);
+        db.insert(TABLE_MOVIE, null, values);*/
 
         Log.i("info", "dummy created");
 
@@ -88,7 +88,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return result;
     }
 
-    public ArrayList<Movies> getPGRating(Boolean filter){
+    public ArrayList<Movies> filterPGRating(Boolean filter){
         ArrayList<Movies> movieAL = new ArrayList<Movies>();
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {COLUMN_ID, COLUMN_TITLE, COLUMN_GENRE, COLUMN_RATING, COLUMN_YEAR};
@@ -117,7 +117,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public ArrayList<Movies> filterByRating (String filteredRating){
 
         if(filteredRating.equalsIgnoreCase("ALL RATINGS")){
-            return getPGRating(false);
+            return filterPGRating(false);
         }else{
             ArrayList<Movies> alFilteredMovie = new ArrayList<Movies>();
             SQLiteDatabase db = this.getReadableDatabase();
