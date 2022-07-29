@@ -34,14 +34,14 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(createMovieMOVIETableSQL);
         Log.i("info", "created table");
 
-        /*//dummy record
+        //dummy record
         ContentValues values = new ContentValues();
         values.put(COLUMN_TITLE, "Ju On");
         values.put(COLUMN_GENRE, "Horror");
         values.put(COLUMN_RATING, "PG13");
         values.put(COLUMN_YEAR, "2014");
         
-        db.insert(TABLE_MOVIE, null, values);*/
+        db.insert(TABLE_MOVIE, null, values);
 
         Log.i("info", "dummy created");
 
