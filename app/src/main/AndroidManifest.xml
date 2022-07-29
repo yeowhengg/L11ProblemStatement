@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyMovies">
         <activity
+            android:name=".ModifyMoviesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowMoviesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

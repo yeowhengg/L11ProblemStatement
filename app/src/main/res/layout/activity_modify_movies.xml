@@ -4,108 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ModifyMoviesActivity"
     android:orientation="vertical"
     android:layout_margin="10dp">
 
     <TextView
+        android:text="Movie ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Movie Title">
+        android:id="@+id/tvMovieID"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/etMovieID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textIsSelectable="false">
+
+    </EditText>
+
+    <TextView
+        android:text="Movie Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMovieTitle"
+        >
 
     </TextView>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Movie title here"
         android:id="@+id/etMovieTitle">
 
     </EditText>
 
     <TextView
+        android:text="Genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Genre">
+        android:id="@+id/tvGenre"
+        >
 
     </TextView>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Genre here"
-        android:id="@+id/etMovieGenre">
+        android:id="@+id/etGenre">
+
+    </EditText>
+
+    <TextView
+        android:text="Year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvYear"
+        >
+
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etYear2">
 
     </EditText>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Year">
+        android:text="Rating">
 
     </TextView>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter year of release here"
-        android:id="@+id/etYear">
-
-    </EditText>
-
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Rating">
-
-   </TextView>
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerRating">
-
+        android:id="@+id/modifySpinnerID">
     </Spinner>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".5"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:text="INSERT"
-            android:id="@+id/btnInsert">
+            android:id="@+id/btnUpdate2"
+            android:text="UPDATE"
+            android:layout_weight="0.5"
+            android:layout_marginRight="10dp">
 
         </Button>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".5"
-            android:text="SHOW LIST"
-            android:id="@+id/btnShowList">
+            android:id="@+id/btnDelete2"
+            android:text="DELETE"
+            android:layout_weight="0.5">
 
         </Button>
 
     </LinearLayout>
 
-    <ScrollView
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:id="@+id/btnCancel">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="testing area"
-            android:id="@+id/tvTest">
-
-        </TextView>
-
-
-    </ScrollView>
-
+    </Button>
 </LinearLayout>
